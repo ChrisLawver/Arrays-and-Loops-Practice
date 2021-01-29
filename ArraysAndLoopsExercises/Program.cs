@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace ArraysAndLoopsExercises
 {
@@ -70,6 +71,26 @@ namespace ArraysAndLoopsExercises
 
             // Enter your solution here
 
+            int[] userNumbers = new int[10];
+
+            for (int i = 0; i < userNumbers.Length; i++)
+            {
+            Console.Write($"{i + 1}. Enter your 10 favorite numbers: ");
+            userNumbers[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+
+            Array.Sort(userNumbers);
+
+            Console.WriteLine("\nYour favorite numbers in order are:");
+            foreach (int number in userNumbers)
+            {
+                Console.Write($"{number}, ");
+            }
+
+            Console.WriteLine($"\n\nThe lowest number was {userNumbers[0]}");
+            Console.WriteLine($"The highest number was {userNumbers[9]}\n");
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -87,6 +108,19 @@ namespace ArraysAndLoopsExercises
 
             // Enter your solution here
 
+            string[] daysOfWeek = new string[] { "Sunday", "Monday", "Tuesday", "Wednesday",
+                "Thursdsay", "Friday", "Saturday"};
+
+            for (int i = 0; i < daysOfWeek.Length; i++)
+            {
+                Console.WriteLine($"{i + 1} = {daysOfWeek[i]}");
+            }
+
+            Console.Write("\nEnter a number between 1 and 7: ");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"You chose {daysOfWeek[userNumber - 1]}!\n");
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -101,6 +135,17 @@ namespace ArraysAndLoopsExercises
 
             // Enter your solution here
 
+            int[] userNumbers = new int[5];
+
+            for (int i = 0; i < userNumbers.Length; i++)
+            {
+            Console.Write($"{i + 1}. Enter 5 numbers: ");
+            userNumbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Array.Sort(userNumbers);
+            Console.WriteLine($"The smallest number is {userNumbers[0]}");
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -114,8 +159,14 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("SHOPPING LIST\n");
 
             // Enter your solution here
+            string[] shoppingList = new string[] {"Apples", "Bread", "Eggs", "Cereal" };
 
-            Console.Write("Press enter to return to the Main Menu");
+            foreach (var item in shoppingList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.Write("\n6Press enter to return to the Main Menu");
             Console.ReadLine();
         }
 
@@ -128,6 +179,26 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("WHAT'S THE LONGEST WORD?\n");
 
             // Enter your solution here
+
+            Console.Write("Enter a phrase: ");
+            string phrase = Console.ReadLine();
+
+            string[] newPhrase = phrase.Split(" ");
+
+            
+         
+
+
+            foreach (string word in newPhrase)
+            {
+                
+                Console.WriteLine(word.Length); 
+                Console.WriteLine(word);
+            }
+
+
+            
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -142,6 +213,13 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("WHAT'S THE SECOND TO LAST WORD?\n");
 
             // Enter your solution here
+
+            Console.Write("Enter a sentence: ");
+            string userSentence = Console.ReadLine();
+
+            string[] arrSentence = userSentence.Split(" ");
+            int secontToLast = arrSentence.Length - 2;
+            Console.WriteLine(arrSentence[secontToLast]);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -158,6 +236,22 @@ namespace ArraysAndLoopsExercises
 
             // Enter your solution here
 
+            Console.Write("Enter a number between 3 and 6: ");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+
+            int[] triangle = new int[userNumber];
+
+            
+            for (int row = 0; row < userNumber; row++)
+            {
+                for (int column = 0; column < triangle[row]; column++)
+                {
+                    Console.WriteLine("*");
+                }
+            }
+            
+
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -171,6 +265,9 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("COMMON VALUES\n");
 
             // Enter your solution here
+            int[] emptyArr = new int[5];
+            int[] array1 = new int[] { 1, 3, 7, 12, 15 };
+            int[] array2 = new int[] { 2, 4, 7, 13, 15 };
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
