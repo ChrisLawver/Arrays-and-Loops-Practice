@@ -238,19 +238,19 @@ namespace ArraysAndLoopsExercises
 
             Console.Write("Enter a number between 3 and 6: ");
             int userNumber = Convert.ToInt32(Console.ReadLine());
-
-            int[] triangle = new int[userNumber];
-
             
             for (int row = 0; row < userNumber; row++)
             {
-                for (int column = 0; column < triangle[row]; column++)
+                for (int i = userNumber; i > row; i--)
                 {
-                    Console.WriteLine("*");
+                    Console.Write(" ");
                 }
+                for (int column = 0; column < row + 1; column++)
+                {
+                    Console.Write("**");
+                }
+                    Console.WriteLine();
             }
-            
-
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -265,7 +265,7 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("COMMON VALUES\n");
 
             // Enter your solution here
-            int[] emptyArr = new int[5];
+            int[] largeArray = new int[10];
             int[] array1 = new int[] { 1, 3, 7, 12, 15 };
             int[] array2 = new int[] { 2, 4, 7, 13, 15 };
 
