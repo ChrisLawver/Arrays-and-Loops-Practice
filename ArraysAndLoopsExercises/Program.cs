@@ -184,23 +184,27 @@ namespace ArraysAndLoopsExercises
             string phrase = Console.ReadLine();
 
             string[] newPhrase = phrase.Split(" ");
+            int[] lengthOfWords = new int[newPhrase.Length];
 
-            
-         
-
-
-            foreach (string word in newPhrase)
+            for (int i = 0; i < newPhrase.Length; i++)
             {
-                
-                Console.WriteLine(word.Length); 
-                Console.WriteLine(word);
+                lengthOfWords[i] = newPhrase[i].Length;
             }
 
+            Array.Sort(lengthOfWords);
 
-            
+            Console.Write("The longest word(s): ");
 
+            for (int i = 0; i < lengthOfWords.Length; i++)
+            {
+                if(lengthOfWords[newPhrase.Length - 1] == newPhrase[i].Length)
+                {
+                    Console.Write($"{newPhrase[i]} ");
+                }
 
-            Console.Write("Press enter to return to the Main Menu");
+            }
+
+            Console.Write("\nPress enter to return to the Main Menu");
             Console.ReadLine();
         }
 
